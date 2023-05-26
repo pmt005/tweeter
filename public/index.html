@@ -57,7 +57,8 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <form action="/tweets" method="POST" id="new-tweet-form" >
+      <section id ="new-tweet">
+        <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div id="new-tweet-footer">
@@ -65,6 +66,40 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+       
+      <section id ="tweet-container">
+        <article class="tweet">
+          <header>
+
+            <div class="name-avatar">
+              <img src="/images/delivery-boy.png">
+              <div class="user-name">Newton</div>
+            </div>
+
+            <div>
+              @SirIsaac
+            </div>
+
+          </header>
+
+          <div class="tweet-content">
+            <h3>If I have seen further it is by standing on the shoulders of giants</h3>
+          </div>
+
+          <footer>
+            <p>10 days ago</p>
+            <div class="footer-buttons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+
+        </article>
+      </section>
+
+
     </main>
     
      

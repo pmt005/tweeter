@@ -1,10 +1,9 @@
+/* --------------- NEW TWEET --------*/
 
-.new-tweet-form {
-  margin-top: 30px;
+#new-tweet {
   display: flex;
   flex-direction: column;
   width: 100%;
-  
 }
 
 #tweet-text {
@@ -13,10 +12,8 @@
   border-bottom: 3px solid black;
   width: 100%;
   bottom: 0;
-  height: 45px;
-  
+  padding-top: -1em;
 }
-
 
 #new-tweet-footer {
   display: flex;
@@ -25,12 +22,75 @@
   margin-top: 5px;
   margin-bottom: 5px;
   font-family: 'Bungee';
-  align-items: center;
+  align-items: center; 
 }
 
 #tweet-button{
   background-color: #4156A2;
   color: white;
   height: 35px;
+}
+
+/* --------------- EXISTING TWEET --------*/
+
+#tweet-container {
+  margin-top: 0.7em;
+  
+}
+article.tweet {
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*---TWEET HEADER--*/
+article.tweet header{
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+}
+
+article.tweet header div.handle {
+  color: #c8c8e1;
+  font-weight: 400;
+}
+
+article.tweet header img {
+  max-height: 2.3em;
+  max-width: 2.3em;
+  padding-right: 0.5em;
+}
+
+/*---TWEET BODY--*/
+article.tweet div.tweet-content{
+  display: flex;
+  justify-content: start;
+  padding-left: 1em;
+  width: 100%;
+} 
+article.tweet header .name-avatar{
+  display: flex;
+  align-items: center;
+}
+
+/*---TWEET FOOTER--*/
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.3rem solid black;
+  width: 97%;
+}
+
+article.tweet div.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 10%;
 }
 
