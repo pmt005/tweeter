@@ -43,16 +43,27 @@ article.tweet {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2em;;
+}
+
+article.tweet:hover {
+  box-shadow: 0.3em 0.3em #bebed2;
 }
 /*---TWEET HEADER--*/
 article.tweet header{
-  padding-top: 1em;
+  padding-top: 0.2em;
   padding-left: 1em;
   padding-right: 1em ;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width:100%;
+  margin-bottom: 1em;
+}
+
+article.tweet header .name-avatar{
+  display: flex;
+  align-items: center;
 }
 
 article.tweet header div.handle {
@@ -71,12 +82,10 @@ article.tweet div.tweet-content{
   display: flex;
   justify-content: start;
   padding-left: 1em;
-  width: 100%;
+  width: 97%;
+  margin-bottom: 1em;
 } 
-article.tweet header .name-avatar{
-  display: flex;
-  align-items: center;
-}
+
 
 /*---TWEET FOOTER--*/
 article.tweet footer {
@@ -85,12 +94,17 @@ article.tweet footer {
   align-items: center;
   border-top: 0.3rem solid black;
   width: 97%;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
 }
 
-article.tweet div.footer-buttons {
+article.tweet div.footer-buttons{
   display: flex;
   justify-content: space-between;
   align-content: center;
   width: 10%;
 }
 
+i:hover {
+  color:blueviolet;
+}
