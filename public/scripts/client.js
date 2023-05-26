@@ -65,6 +65,33 @@ $(document).ready(function() {
     }
   ];
 
+  /*
+    //Adds new tweet when clicking submit//
+    const $button = $("#tweet-button");
+    $($button).on('click', function(event) {
+      event.preventDefault();
+      console.log("MADE IT HERE");
+      const $newTweet = $("#new-tweet-form").serialize();
+      $.post("/tweets/", $newTweet, () => {
+        $($newTweet).find("#tweet-text").val("");
+        console.log("MADE IT TO HERE");
+      });
+    });
+    */
+
+  //Adds new tweet when clicking submit//
+  $("#new-tweet-form").submit(function(event) {
+    event.preventDefault();
+    const newTweet = $(this).serialize();
+    $.post("/tweets/", newTweet, () => {
+      const $content = $(this).find("#tweet-text").val();
+      console.log("Made it here");
+      console.log($content);
+
+      
+    });
+  });
+
   const renderTweets = function(tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
@@ -75,10 +102,6 @@ $(document).ready(function() {
       $('#tweet-container').append($tweet);
     }
   };
-
-  
-
-
   renderTweets(data);
-
 });
+
