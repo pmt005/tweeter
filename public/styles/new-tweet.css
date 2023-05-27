@@ -25,6 +25,10 @@
   align-items: center; 
 }
 
+.red-counter {
+  color: red;
+}
+
 #tweet-button{
   background-color: #4156A2;
   color: white;
@@ -108,3 +112,4 @@ article.tweet div.footer-buttons{
 i:hover {
   color:blueviolet;
 }
+

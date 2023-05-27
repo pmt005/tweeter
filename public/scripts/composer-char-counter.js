@@ -1,27 +1,25 @@
 /* eslint-disable no-undef */
-$(document).ready(function() {
-  console.log("READY TO CODE");
-  const $tweetText = $("#tweet-text");
 
-  $tweetText.on("input", function() {
-    const val = $tweetText.val();
-    const numCharRemaining = 140 - val.length;
-    console.log(`The number of characters remaining: ${numCharRemaining}`);
-    const counter = $(this).parent().children("#new-tweet-footer").children(".counter");
-    counter.text(numCharRemaining);
-
-    if (numCharRemaining <= 0) {
-      counter.css('color', 'red');
-    } else {
-      counter.css('color', '#545149');
-    }
-
-
-
-
-
-
-
+  $(document).ready(function() {
+    $("#tweet-text").on("input", onInput);
   });
+  
+  const onInput = function() {
+    const val = $(this).val();
+    const numCharRemaining = 140 - val.length;
+    const $form = $(this).closest("form");
+    const $counter = $form.find(".counter");
+    $counter.text(numCharRemaining);
+  
+    if (numCharRemaining <= 0) {
+      $counter.addClass('red-counter');
+    } else {
+      $counter.removeClass('red-counter');
+    }
+  };
 
-});
+
+
+
+
+
