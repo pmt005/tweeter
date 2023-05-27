@@ -5,8 +5,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  
-  
+
+
   const createTweetElement = function(tweetObj) {
     let $tweet = $(`
     <article class="tweet">
@@ -38,15 +38,25 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  
+
   $("#new-tweet-form").submit(function(event) {
     event.preventDefault();
+    const $val = $(this).find("#tweet-text").val();
     const $newTweet = $(this).serialize();
-    $.post("/tweets", $newTweet)
-      .then(() => {
-        $(this).find("#tweet-text").val();
-        loadTweets();
-      });
+
+
+    if (!$val.length) {
+      alert("Cannot submit. You've not entered a tweet");
+    } else if ($val.length > 140) {
+      alert("Too many characters (tweet <= 140)");
+    } else {
+      $.post("/tweets", $newTweet)
+        .then(() => {
+          $val;
+          loadTweets();
+        });
+    }
+
   });
 
   const renderTweets = function(tweets) {
@@ -61,7 +71,7 @@ $(document).ready(function() {
     $.get("/tweets")
       .then((data) => {
         renderTweets(data);
-        
+
       });
 
 
