@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-     type="text/css" />
-
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
-     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -21,41 +20,37 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
-     integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
-    
-     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==
-    " crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span id="main">tweeter</span>
-      <span id="nav-bar-text"><div><strong>Write</strong> a new tweet<br></div>
-        <div id="nav-img"><i class="fas fa-angle-double-down"></i></div>
-      </span>
-    </nav>
 
-      <header id="profile-header" >
-        <div id="profile">
-          <div>
-              <img src="/images/profile-hex.png"> 
-          </div>
-          <br>
-          <div id="name">
-            <strong>Patrick</strong>Tumu
-        </div>
-      </div>
-    </header>
+    <!-- Top nav bar (fixed) -->
+    <div class="top-section">
+      <nav>
+        <span id="main">tweeter</span>
+        <span id="nav-bar-text"><div><strong>Write</strong> a new tweet<br></div>
+          <div id="nav-img"><i class="fas fa-angle-double-down"></i></div>
+        </span>
+      </nav>
   
+        <header id="profile-header" >
+          <div id="profile">
+            <div>
+                <img src="/images/profile-hex.png"> 
+            </div>
+            <br>
+            <div id="name">
+              <strong>Patrick</strong>Tumu
+          </div>
+        </div>
+      </header>
+    </div>
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
 
@@ -68,7 +63,9 @@
           <i class="fa-solid fa-circle-exclamation"></i>  Tweets must be at or below 140 characters
         </span>
         <form action="/tweets" method="POST" id="new-tweet-form">
-          <label for="tweet-text"><strong>What are you humming about?</strong></label>
+          <label for="tweet-text">
+            <div id="tweet-label"> <strong>What are you humming about? </strong> </div>
+        </label>
           <textarea name="text" id="tweet-text"></textarea>
           <div id="new-tweet-footer">
             <button type="submit" id="tweet-button">Tweet</button>
@@ -76,7 +73,8 @@
           </div>
         </form>
       </section>
-       
+     
+      <!-- Where the tweets will be styled  -->
       <section id ="tweet-container"></section>
 
     </main>
