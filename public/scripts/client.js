@@ -46,14 +46,10 @@ $(document).ready(function() {
     const $errEmpty = $(this).parent().find("#error-empty");
     const $errLong = $(this).parent().find("#error-too-many-char");
 
-    //$errEmpty.slideUp();
-    //$errLong.slideUp();
     if (!$val.length) {
-      $errEmpty.slideDown("slow");
-      $errLong.hide();
+      $errEmpty.slideDown().delay(4000).slideUp();
     } else if ($val.length > 140) {
-      $errLong.slideDown("slow");
-      $errEmpty.hide();
+      $errLong.slideDown().delay(4000).slideUp();
     } else {
       $.post("/tweets", $newTweet)
         .then(() => {
