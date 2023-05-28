@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-
+{
   $(document).ready(function() {
     $("#tweet-text").on("input", onInput);
   });
@@ -17,7 +17,7 @@
       $counter.removeClass('red-counter');
     }
   };
-
+}
 
 
 

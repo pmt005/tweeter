@@ -43,12 +43,17 @@ $(document).ready(function() {
     event.preventDefault();
     const $val = $(this).find("#tweet-text").val();
     const $newTweet = $(this).serialize();
+    const $errEmpty = $(this).parent().find("#error-empty");
+    const $errLong = $(this).parent().find("#error-too-many-char");
 
-
+    //$errEmpty.slideUp();
+    //$errLong.slideUp();
     if (!$val.length) {
-      alert("Cannot submit. You've not entered a tweet");
+      $errEmpty.slideDown("slow");
+      $errLong.hide();
     } else if ($val.length > 140) {
-      alert("Too many characters (tweet <= 140)");
+      $errLong.slideDown("slow");
+      $errEmpty.hide();
     } else {
       $.post("/tweets", $newTweet)
         .then(() => {

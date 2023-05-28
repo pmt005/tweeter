@@ -51,7 +51,7 @@
           </div>
           <br>
           <div id="name">
-              <h2>Patrick Tumu</h2>
+            <strong>Patrick</strong>Tumu
         </div>
       </div>
     </header>
@@ -59,7 +59,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+       <!-- Create a new tweet -->
       <section id ="new-tweet">
+        <span id="error-empty" class="error-message">
+          <i class="fa-solid fa-circle-exclamation"></i>  Please enter your tweet before submission
+        </span>
+        <span id="error-too-many-char" class="error-message">
+          <i class="fa-solid fa-circle-exclamation"></i>  Tweets must be at or below 140 characters
+        </span>
         <form action="/tweets" method="POST" id="new-tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
