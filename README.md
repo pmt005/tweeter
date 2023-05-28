@@ -22,17 +22,19 @@ This repository is the starter code for the project: Students will fork and clon
 - md5
 
 ## Responsive Design
+- Adjusts styles for different viewing platforms
+- Dynamically interacts without hardcoded values
 
-
-
+## Screenshots
+-This is the view for tablets and more narrow views
 !["This is the view for tablets and more narrow views"](https://github.com/pmt005/tweeter/blob/master/public/images/Tweeter%20-%20tablet%20view.png?raw=true)
 
 
-
+-This is the view for wide screens such as deksktop
 !["This is the view for wide screens such as deksktop"](https://github.com/pmt005/tweeter/blob/master/public/images/Tweeter-%20desktop.png?raw=true)
 
 
-
+-Here you can see error warning appear for input errors
 !["Here you can see error warning appear for input errors"](https://github.com/pmt005/tweeter/blob/master/public/images/Tweeter-Error.png?raw=true)
 
 
