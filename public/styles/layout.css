@@ -33,6 +33,20 @@ body {
  color: rgba(41, 40, 40, 0.911);
 }
 
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2rem;
+  }
+  
+  .container {
+    width: 200%;
+    margin-top: 120px;
+    margin-right: 50px;
+    margin-left: 30px;
+  }
+}
 
 
 /*

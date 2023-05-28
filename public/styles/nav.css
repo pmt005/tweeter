@@ -23,3 +23,9 @@ nav {
 #nav-img {
   color: red;
 }
+
+@media only screen and (max-width: 1023px) {
+nav{
+  background-color: #4057a100;
+}
+}
