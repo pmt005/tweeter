@@ -57,8 +57,9 @@ $(document).ready(function() {
     } else {
       $.post("/tweets", $newTweet)
         .then(() => {
-          $val;
           loadTweets();
+          $(this).find("#tweet-text").val("");
+          $(this).find(".counter").val(140);
         });
     }
 
